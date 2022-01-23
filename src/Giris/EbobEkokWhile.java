@@ -16,7 +16,7 @@ public class EbobEkokWhile {
         {
             if( ekok % n1 == 0 && ekok % n2 == 0 )
             {
-                System.out.printf("Ekok: " + ekok);
+                System.out.println("Ekok: " + ekok);
                 break;
             }
             ++ekok;
