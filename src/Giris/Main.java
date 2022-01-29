@@ -4,22 +4,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-     Car audi = new Car();
-     audi.model = "A8";
-     audi.speed = 20;
+     Car audi = new Car("A8", 20, "blue");
      audi.incSpeed(30);
      audi.printFeatures();
 
 
-     Car bmw = new Car();
-     bmw.model = "X5";
-     bmw.speed = 30;
+     Car bmw = new Car("X5", 50, "pink");
      bmw.printFeatures();
+     System.out.println(bmw.color);
 
 
-     Car mercedes = new Car();
-     mercedes.model = "CLA";
-     mercedes.speed = 50;
+     Car mercedes = new Car("CLA", 80, "black");
      mercedes.printFeatures();
 
     }
