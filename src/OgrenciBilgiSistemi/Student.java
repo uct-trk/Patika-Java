@@ -34,8 +34,20 @@ public class Student {
         }
     }
 
+    void  addBulkSozluNote(int sozlu1, int sozlu2, int sozlu3){
+        if (sozlu1 >= 0 && sozlu1 <= 100){
+            this.c1.sozlu = sozlu1;
+        }
+        if (sozlu2 >= 0 && sozlu2 <= 100){
+            this.c2.sozlu = sozlu2;
+        }
+        if (sozlu3 >= 0 && sozlu3 <= 100){
+            this.c3.sozlu = sozlu3;
+        }
+    }
+
     void isPass(){
-        this.avarage = ((this.c1.note) + (this.c2.note) + (this.c3.note)) / 3.0;
+        this.avarage = ( ( (this.c1.note * 0.8) + (this.c1.sozlu * 0.2) ) + ((this.c2.note * 0.8) + ( this.c2.sozlu * 0.2 )) + ((this.c3.note * 0.8) + (this.c3.sozlu * 0.2 ))) / 3.0;
         if (this.avarage >= 55){
             System.out.println("Sınıfı Geçtiniz");
             this.isPass = true;
@@ -48,8 +60,11 @@ public class Student {
 
     void  printNote(){
         System.out.println(this.c1.name + " Notu\t:" + this.c1.note);
+        System.out.println(this.c1.name + " Sözlü\t:" + this.c1.sozlu);
         System.out.println(this.c2.name + " Notu\t:" + this.c2.note);
+        System.out.println(this.c2.name + " Sözlü\t:" + this.c2.sozlu);
         System.out.println(this.c3.name + " Notu\t:" + this.c3.note);
+        System.out.println(this.c3.name + " Sözlü\t:" + this.c3.sozlu);
         System.out.println("Ortalamanız:" + this.avarage);
     }
 }

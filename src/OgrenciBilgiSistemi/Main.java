@@ -19,11 +19,13 @@ public class Main {
 
 
         Student s1 = new Student("İnek Şaban", "1", "4. sınıf", tarih, fizik, matematik);
-        s1.addBulkExamNote(50,70,80);
+        s1.addBulkExamNote(100,100,100);
+        s1.addBulkSozluNote(100,100,100);
         s1.isPass();
 
         Student s2 = new Student("Güdük Necmi", "2", "4. sınıf", tarih, fizik, matematik);
         s1.addBulkExamNote(90,40,50);
+        s1.addBulkSozluNote(50,60,70);
         s2.isPass();
     }
 }
